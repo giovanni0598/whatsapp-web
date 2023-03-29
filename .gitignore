@@ -1,0 +1,10 @@
+node_modules
+.env
+baileys_auth_info
+baileys_store_multi
+package-lock.json
+.github
+kube
+kube-staging
+Dockerfile
+Dockerfile-staging
