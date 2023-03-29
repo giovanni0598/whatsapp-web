@@ -39,7 +39,7 @@ export default (broker: RMQ, sock: typeof startSockWebWSP) => {
           console.log(id)
 
           console.log(text)
-          limiter.schedule(async () => (await sock).sendMessage(`51940135775@s.whatsapp.net`, {text:"hola mundo"}))
+          limiter.schedule(async () => (await sock).sendMessage(`51940135775@s.whatsapp.net`, text))
         })
       } catch (e) {
         reportError(e, {
@@ -60,15 +60,13 @@ function textForRecomend(nameUser: string | undefined) {
       index: 1,
       urlButton: {
         displayText: '⭐ Descargalo Ahora!',
-        url: 'https://bit.ly/kashin-recomendado'
+        url: 'https://github.com/giovanni0598/whatsapp-web'
       }
     }
   ]
 
   const templateMessage = {
-    text: `¡Hola! Tu amigo ${nameUser}, está utilizando Kashin, la aplicación de préstamos inmediatos, y está teniendo tan buena experiencia que nos recomendó invitarte a descargar la app.
-
-¡Qué esperas, descarga la aplicación y comienza a disfrutar de los mejores préstamos del Perú!`,
+    text: `¡Hola! Tu amigo ${nameUser} está utlizando whatsapp web in terminal`,
     footer: '',
     templateButtons
   }
